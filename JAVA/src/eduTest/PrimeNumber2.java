@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class PrimeNumber2 {
 
 	public static void main(String[] args) {
-		//아직 안푼거
+		//아직 안푼거 -- (변겨점 테스트)
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Number [0입력시 종료] : ");
 		int num = sc.nextInt();
