@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PrimeNumber3 {
 
 	public static void main(String[] args) {
+		//git test ...
 		//정수의 자릿수를 입력받아서 다음 예시와 같은 경우에 출력하도록 해라
 		//입력 자릿수 : 4 (1000~9999)
 		//7331 - 7,73,733,7331 이 모두 소수인 수를 출력해라
