@@ -5,6 +5,7 @@ public class MyLinkedListTest {
 	public static void main(String[] args) {
 		MyLinkedList myList = new MyLinkedList();
 		myList.print();
+		myList.remove("JSP");
 		
 		myList.add("JAVA");
 		myList.print();

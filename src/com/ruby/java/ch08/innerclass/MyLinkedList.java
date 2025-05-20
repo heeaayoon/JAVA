@@ -32,18 +32,20 @@ public class MyLinkedList {
 	
 	// 외부 메소드 remove(String string) : 삭제
 	public void remove(String string) {
-		if (head == null) { return; // 아무것도 들어와 있지 않았을 때는 아예 실행을 안함
+		if (head == null) { 
+			System.out.println("삭제할 데이터가 존재하지 않습니다.");
+			return;// 아무것도 들어와 있지 않았을 때는 아예 실행을 안함
 		} 
-		Node next = head;
+		Node rem = head;
 		Node pre = null;
 		
-		while (next.link != null) { 
-			if(string.equals(next.data)) {
-				pre.link = next.link;
+		while (rem.link != null) { 
+			if(string.equals(rem.data)) {
+				pre.link = rem.link;
 				break;
 			}
-			pre = next;
-			next = next.link;
+			pre = rem;
+			rem = rem.link;
 		}
 	}
 
@@ -53,10 +55,10 @@ public class MyLinkedList {
 			System.out.println("등록된 데이터가 없습니다.");
 		} else {
 			System.out.println("등록된 데이터는 다음과 같습니다.");
-			Node next = head;
-			while (next != null) {
-				System.out.println(next.data);
-				next = next.link;
+			Node p = head;
+			while (p != null) {
+				System.out.println(p.data);
+				p = p.link;
 			}
 			System.out.println();
 		}

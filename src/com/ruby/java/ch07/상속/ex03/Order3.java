@@ -1,16 +1,16 @@
-package com.ruby.java.ch07.»ó¼Ó.ex03;
+package com.ruby.java.ch07.ï¿½ï¿½ï¿½.ex03;
 
 public class Order3 extends SeasonalDiscount3{
 	
-	private final int N = 20; //»ó¼ö
-	private Customer3 customer; // °í°´
-	private Item3[] items; // ÁÖ¹® Á¦Ç° ¹è¿­
-	private int[] quantities; // ÁÖ¹® Á¦Ç° ¼ö·® ¹è¿­
-	private String[] orderDates; // ÁÖ¹®ÀÏÀÚ ¹è¿­
+	private final int N = 20; //ï¿½ï¿½ï¿½
+	private Customer3 customer; // ï¿½ï¿½
+	private Item3[] items; // ï¿½Ö¹ï¿½ ï¿½ï¿½Ç° ï¿½è¿­
+	private int[] quantities; // ï¿½Ö¹ï¿½ ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+	private String[] orderDates; // ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
 	private int count = 0;
-	private double rate; //½ÃÁðÇÒÀÎÀ²
+	private double rate; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
-	//»ý¼ºÀÚ //ÀÌ¹ø¿£ ÃÎ Á¦Ç° Á¾·ùÀÇ ¼ö·®ÀÌ ¾È Á¤ÇØÁ® ÀÖÀ½.
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ //ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 	public Order3(double r, Customer3 c) {
 		super(r);
 		this.customer=c;
@@ -20,7 +20,7 @@ public class Order3 extends SeasonalDiscount3{
 		this.rate = r;
 	}
 	
-	//Á¦Ç°À» Ãß°¡ÇÏ´Â ¸Þ¼Òµå
+	//ï¿½ï¿½Ç°ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
 	public void addItem(Item3 item, int quantity, String date) {
 		if (count<items.length) {
 			items[count] = item;
@@ -30,7 +30,7 @@ public class Order3 extends SeasonalDiscount3{
 		}
 	}
 	
-	//ÃÑ¾×À» Ãâ·ÂÇÏ´Â ¸Þ¼Òµå
+	//ï¿½Ñ¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
 	public double calculateTotal() {
 		double sum = 0.0;
 		for(int i=0;i<count;i++) {
@@ -39,27 +39,27 @@ public class Order3 extends SeasonalDiscount3{
 		return sum;
 	}
 	
-	//°í°´ ÇÒÀÎµÈ ±Ý¾× ¸Þ¼Òµå
+	//ï¿½ï¿½ ï¿½ï¿½ï¿½Îµï¿½ ï¿½Ý¾ï¿½ ï¿½Þ¼Òµï¿½
 	public double discountedCalculate1() {
 		return customer.applyDiscount(calculateTotal());
 	}
 	
-	//ÇÒÀÎµÈ ³»¿ª ¹× ÇÒÀÎ ÃÖÁ¾ ±Ý¾×À» Ãâ·ÂÇÏ´Â ¸Þ¼Òµå
-	//´Ü, ÀÏ¹Ý°í°´Àº ½ÃÁð ÇÒÀÎÀÌ ¾ø°í, ÇÁ¸®¹Ì¾ö °í°´Àº ½ÃÁð ÇÒÀÎÀÌ Ãß°¡µÊ
+	//ï¿½ï¿½ï¿½Îµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Þ¼Òµï¿½
+	//ï¿½ï¿½, ï¿½Ï¹Ý°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½
 	public void printOrderSummary() {
-		System.out.println("°í°´¸í : "+customer.getName()+", °í°´ Å¸ÀÔ : "+customer.toString());
+		System.out.println("ì£¼ë¬¸ìžëª… :" +customer.getName());
 		for(int i=0;i<count;i++) {
-			System.out.println("ÁÖ¹® Á¦Ç° : "+items[i].getName()+", ´Ü°¡ : "+items[i].getPrice()+", Á¦Ç° ¼ö·® : "+quantities[i]);
+			System.out.println("ï¿½Ö¹ï¿½ ï¿½ï¿½Ç° : "+items[i].getName()+", ï¿½Ü°ï¿½ : "+items[i].getPrice()+", ï¿½ï¿½Ç° ï¿½ï¿½ï¿½ï¿½ : "+quantities[i]);
 		}
-		System.out.println("ÃÑ¾× : "+calculateTotal());
-		System.out.println("°í°´ÇÒÀÎ ±Ý¾× : "+discountedCalculate1());
+		System.out.println("ï¿½Ñ¾ï¿½ : "+calculateTotal());
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ : "+discountedCalculate1());
 		
 		if(customer instanceof PremiumCustomer3) {
-			System.out.println("Ãß°¡ ½ÃÁð ÇÒÀÎ¾× : "+ getSeasonalDiscountedPrice(calculateTotal()));
-			System.out.println("ÃÖÁ¾ ±Ý¾× : "+(calculateTotal()-discountedCalculate1()-getSeasonalDiscountedPrice(calculateTotal())));
+			System.out.println("ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¾ï¿½ : "+ getSeasonalDiscountedPrice(calculateTotal()));
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ : "+(calculateTotal()-discountedCalculate1()-getSeasonalDiscountedPrice(calculateTotal())));
 		}else {
-			System.out.println("Ãß°¡ ½ÃÁð ÇÒÀÎÀÌ ¾ø½À´Ï´Ù.");
-			System.out.println("ÃÖÁ¾ ±Ý¾× : "+(calculateTotal()-discountedCalculate1()));
+			System.out.println("ï¿½ß°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½Ý¾ï¿½ : "+(calculateTotal()-discountedCalculate1()));
 		}
 	
 		System.out.println();
