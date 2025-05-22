@@ -97,7 +97,7 @@ class Library {
 	
 	//제목으로 책을 찾는 메소드
 	public Book searchBookByTitle(String title) {
-		//String 클래스의 compareTo() 사용
+		//String 클래스의 compareTo() 사용 -> 같을 때만 0반환
 		for(int i =0;i<top;i++) {
 			if (books[i].getTitle().compareTo(title)==0) {
 				return books[i];
