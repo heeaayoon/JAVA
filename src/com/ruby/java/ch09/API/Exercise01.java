@@ -112,7 +112,6 @@ public class Exercise01 {
 		Library library = new Library();
 
 		// 5개의 Book 객체 초기화
-		// 5개의 책 객체 초기화
 		Book book1 = new Book("자바", "강감찬", 1995, "12");
 		Book book2 = new Book("파이썬", "이순신", 2008, "9");
 		Book book3 = new Book("C++", "을지문덕", 2008, "8");
