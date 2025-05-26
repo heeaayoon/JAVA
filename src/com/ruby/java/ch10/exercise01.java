@@ -99,6 +99,7 @@ public class exercise01 {
 		Book book3 = new Book("C#", "을지문덕", 2008, "8");
 		Book book4 = new Book("자료구조", "연개소문", 1994, "45");
 		Book book5 = new Book("리액트", "김춘추", 1999, "7");
+		System.out.println(book1);
 		// 책 추가
 		library.addBook(book1);
 		library.addBook(book2);

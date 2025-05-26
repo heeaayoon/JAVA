@@ -54,7 +54,7 @@ class Book implements Comparable<Book> {
 class Library {
 	static final int CAPACITY = 5; // 기본 용량을 5로 설정
 	private ArrayList<Book> books;
-	private int top; //인덱스 역할
+	//private int top; //인덱스 역할
 	
 	//생성자 
 	public Library() {
