@@ -108,7 +108,7 @@ class Library {
 	}
 }
 
-public class exercise01 {
+public class Library_Exercise01_03 {
 	public static void main(String[] args) {
 			ArrayList<Book> LibraryList = new ArrayList<>(); 
 			

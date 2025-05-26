@@ -107,7 +107,7 @@ class Library {
 	}
 }
 
-public class Exercise01 {
+public class Library_Exercise01_01 {
 	public static void main(String[] args) {
 		Library library = new Library();
 

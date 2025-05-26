@@ -89,7 +89,7 @@ class Library {
 	}
 }
 
-public class exercise01 {
+public class Library_Exercise01_02 {
 	public static void main(String[] args) {
 		Library library = new Library();
 

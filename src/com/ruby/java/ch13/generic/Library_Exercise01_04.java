@@ -163,7 +163,7 @@ class Library<T extends MediaBook> {
 	}
 }
 
-public class exercise01 {
+public class Library_Exercise01_04 {
 
 	public static void main(String[] args) {
 		Library<Book5> library = new Library<Book5>();
